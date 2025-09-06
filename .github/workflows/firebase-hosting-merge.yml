@@ -1,11 +1,8 @@
 name: Deploy to Firebase Hosting on merge
 'on':
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  # Disabled automatic runs until Firebase service account is configured
+  # Uncomment and configure FIREBASE_SERVICE_ACCOUNT secret to enable
+  workflow_dispatch:
 
 jobs:
   build_and_deploy:
