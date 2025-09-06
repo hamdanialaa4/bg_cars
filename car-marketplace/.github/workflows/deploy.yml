@@ -36,6 +36,9 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
+      - name: Copy CNAME to dist
+        run: cp public/CNAME dist/
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

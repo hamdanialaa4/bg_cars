@@ -1,0 +1,49 @@
+# سير عمل لنشر محتوى ثابت على GitHub Pages
+
+name: Deploy static content to Pages
+
+# يتحكم في وقت تشغيل سير العمل
+on:
+  # يعمل عند الدفع إلى الفرع "main"
+  push:
+    branches: [ "main" ]
+
+  # يسمح لك بتشغيل سير العمل هذا يدويًا من علامة التبويب Actions
+  workflow_dispatch:
+
+# تعيين الأذونات اللازمة للسماح بالنشر على GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# يتكون تشغيل سير العمل من مهمة واحدة أو أكثر يمكن تشغيلها بالتتابع أو بالتوازي
+jobs:
+  # مهمة النشر
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    # نوع العداء (runner) الذي ستعمل عليه المهمة
+    runs-on: ubuntu-latest
+    # تمثل الخطوات سلسلة من المهام التي سيتم تنفيذها كجزء من المهمة
+    steps:
+      # يقوم بسحب نسخة من مستودعك حتى تتمكن المهمة من الوصول إليه
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # إعداد GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # رفع ملفات الموقع كقطعة أثرية (artifact)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # قم بالتحميل من الدليل الجذر.
+          path: '.'
+
+      # نشر الموقع على GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
