@@ -1,0 +1,17 @@
+# Firebase service account key
+bg-cars-platform-firebase-adminsdk-fbsvc-6da87fa864.json
+car-marketplace/backend/bg-cars-platform-firebase-adminsdk-fbsvc-6da87fa864.json
+
+# Node modules
+node_modules/
+car-marketplace/node_modules/
+car-marketplace/backend/node_modules/
+
+# Build outputs
+dist/
+car-marketplace/dist/
+
+# Environment files
+.env
+.env.local
+.env.production
