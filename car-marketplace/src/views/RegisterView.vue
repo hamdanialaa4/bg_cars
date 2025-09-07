@@ -235,84 +235,10 @@ const handleGoogleRegister = async () => {
 const showTerms = () => {
   showTermsModal.value = true
 }
-</script>
-        return false
-      }
 
-      if (form.value.password.length < 6) {
-        error.value = t('passwordTooShort')
-        return false
-      }
-
-      if (!form.value.agreeToTerms) {
-        error.value = t('mustAgreeToTerms')
-        return false
-      }
-
-      return true
-    }
-
-    const handleRegister = async () => {
-      if (!validateForm()) return
-
-      try {
-        const userData = {
-          email: form.value.email,
-          password: form.value.password,
-          displayName: `${form.value.firstName} ${form.value.lastName}`,
-          userType: form.value.userType,
-          phone: form.value.phone,
-          firstName: form.value.firstName,
-          lastName: form.value.lastName
-        }
-
-        await register(userData)
-
-        successMessage.value = t('accountCreated')
-        setTimeout(() => {
-          router.push('/login')
-        }, 2000)
-
-      } catch (err) {
-        console.error('Registration error:', err)
-      }
-    }
-
-    const registerWithGoogle = async () => {
-      try {
-        await loginWithGoogle()
-        router.push('/')
-      } catch (err) {
-        console.error('Google registration error:', err)
-      }
-    }
-
-    const showTerms = () => {
-      showTermsModal.value = true
-    }
-
-    const acceptTerms = () => {
-      form.value.agreeToTerms = true
-      showTermsModal.value = false
-    }
-
-    return {
-      form,
-      showTermsModal,
-      successMessage,
-      isLoading,
-      error,
-      availableLocales,
-      currentLocale,
-      handleRegister,
-      registerWithGoogle,
-      showTerms,
-      acceptTerms,
-      getLocaleName,
-      setLocale,
-      t
-    }
-  }
+const acceptTerms = () => {
+  form.value.agreeToTerms = true
+  showTermsModal.value = false
 }
 </script>
 

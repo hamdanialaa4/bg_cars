@@ -177,20 +177,6 @@ const handlePasswordReset = async () => {
   }
 }
 </script>
-      error,
-      availableLocales,
-      currentLocale,
-      handleLogin,
-      handleGoogleLogin,
-      showForgotPassword,
-      handlePasswordReset,
-      getLocaleName,
-      setLocale,
-      t
-    }
-  }
-}
-</script>
 
 <style scoped>
 .login-page {
