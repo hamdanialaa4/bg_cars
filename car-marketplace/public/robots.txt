@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Block access to admin areas
+Disallow: /admin/
+Disallow: /api/admin/
+
+# Block access to user-specific content
+Disallow: /seller/
+Disallow: /messages/
+Disallow: /add-car/
+
+# Allow access to main content
+Allow: /cars/
+Allow: /search/
+Allow: /news/
+Allow: /comparison/
+Allow: /image-analysis/
+
+# Sitemap
+Sitemap: https://carmarketbg.com/sitemap.xml

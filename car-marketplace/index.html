@@ -1,14 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BG Car Platform</title>
-    <script type="module" crossorigin src="./assets/index-Dd7OJ83d.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-BKKQLz5Z.css">
+    <meta name="theme-color" content="#667eea" />
+
+    <!-- Primary Meta Tags -->
+    <title>CarMarketBG - Bulgarian Car Marketplace with AI</title>
+    <meta name="title" content="CarMarketBG - Bulgarian Car Marketplace with AI" />
+    <meta name="description" content="Find your perfect car in Bulgaria with AI-powered search, image analysis, and real-time messaging. Buy and sell cars with confidence using our advanced platform." />
+    <meta name="keywords" content="cars, Bulgaria, marketplace, AI, image analysis, car search, automotive, buy cars, sell cars" />
+    <meta name="author" content="CarMarketBG Team" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="Bulgarian, English" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://carmarketbg.com/" />
+    <meta property="og:title" content="CarMarketBG - Bulgarian Car Marketplace with AI" />
+    <meta property="og:description" content="Find your perfect car in Bulgaria with AI-powered search, image analysis, and real-time messaging." />
+    <meta property="og:image" content="https://carmarketbg.com/og-image.jpg" />
+    <meta property="og:locale" content="bg_BG" />
+    <meta property="og:site_name" content="CarMarketBG" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://carmarketbg.com/" />
+    <meta property="twitter:title" content="CarMarketBG - Bulgarian Car Marketplace with AI" />
+    <meta property="twitter:description" content="Find your perfect car in Bulgaria with AI-powered search, image analysis, and real-time messaging." />
+    <meta property="twitter:image" content="https://carmarketbg.com/twitter-image.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/icons/icon-192x192.png" />
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://carmarketbg.com/" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "CarMarketBG",
+      "description": "Bulgarian Car Marketplace with AI-powered features",
+      "url": "https://carmarketbg.com",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web Browser",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "BGN"
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "CarMarketBG Team"
+      },
+      "featureList": [
+        "AI-powered car search",
+        "Image analysis for car condition",
+        "Real-time messaging",
+        "Car comparison tool",
+        "PWA functionality"
+      ]
+    }
+    </script>
+
+    <title>CarMarketBG - Bulgarian Car Marketplace with AI</title>
   </head>
   <body>
-    <div id="app"></div>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+
+    <!-- Loading fallback -->
+    <noscript>
+      <div style="text-align: center; padding: 2rem;">
+        <h1>CarMarketBG</h1>
+        <p>Please enable JavaScript to use this application.</p>
+        <p>Моля, активирайте JavaScript, за да използвате това приложение.</p>
+      </div>
+    </noscript>
   </body>
 </html>
